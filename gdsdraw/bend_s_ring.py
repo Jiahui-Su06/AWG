@@ -15,11 +15,13 @@ def bend_s_ring(
     layer: LayerSpec = (1, 0)
 ) -> gf.Component:
     """绘制由两个圆环拼接而成的 S bend
-            |<--- w --->|
-                   ____
-                  /
-                 /       h
-      start ____/
+            |<------ w ------>|
+                       _______ _
+                      /        ^
+                     /         |
+                    /          h
+                   /           |
+      start ______/           _v_
 
     Args:
         w: S bend 的宽度

@@ -53,4 +53,5 @@ plt.ylabel("Refractive index")
 plt.grid(True)
 plt.show()
 
+
 print(Si3N4(0.6))

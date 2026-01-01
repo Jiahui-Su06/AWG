@@ -1,8 +1,5 @@
 import numpy as np
 import warnings
-import matplotlib
-matplotlib.use("TkAgg")
-from matplotlib import pyplot as plt
 
 
 def Si3N4(x):
@@ -42,16 +39,3 @@ def Si3N4(x):
     )
 
     return n
-
-# 测试代码
-lambda_um = np.linspace(0.5, 0.9, 401)
-n = Si3N4(lambda_um)
-
-plt.plot(lambda_um, n)
-plt.xlabel("Wavelength (µm)")
-plt.ylabel("Refractive index")
-plt.grid(True)
-plt.show()
-
-
-print(Si3N4(0.6))

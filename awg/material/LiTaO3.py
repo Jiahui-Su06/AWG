@@ -1,9 +1,6 @@
 import numpy as np
 import warnings
 
-import matplotlib
-matplotlib.use("TkAgg")
-from matplotlib import pyplot as plt
 
 def LiTaO3(x):
     """
@@ -34,15 +31,3 @@ def LiTaO3(x):
 
     n = np.sqrt(A1 + A2 / (x**2 - A3**2) + A4 * x**2)
     return n
-
-# 测试代码
-lambda_um = np.linspace(0.5, 2.0, 1501)
-n = LiTaO3(lambda_um)
-
-plt.plot(lambda_um, n)
-plt.xlabel("Wavelength (µm)")
-plt.ylabel("Refractive index")
-plt.grid(True)
-plt.show()
-
-print(LiTaO3(1.55))

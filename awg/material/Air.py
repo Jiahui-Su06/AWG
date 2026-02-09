@@ -1,5 +1,10 @@
 import numpy as np
 
+# %%
+import matplotlib
+from matplotlib import pyplot as plt
+import mpld3
+
 
 def Air(x):
     """
@@ -22,3 +27,17 @@ def Air(x):
     if n.size == 1:
         return n.item()
     return n
+
+# %%
+# 测试代码
+lambda_um = np.linspace(0.5, 0.9, 401)
+n = Air(lambda_um)
+
+plt.plot(lambda_um, n)
+plt.xlabel("Wavelength (µm)")
+plt.ylabel("Refractive index")
+plt.grid(True)
+plt.show()
+# mpld3.enable_notebook()
+
+# print(Air(0.6))
